@@ -25,3 +25,10 @@ The trade-off: the encoder only produces unpadded output. If you need padded out
 
 - `encode(data: bytes) -> str`
 - `decode(text: str | bytes) -> bytes`
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
