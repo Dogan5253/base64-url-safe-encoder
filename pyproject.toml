@@ -1,6 +1,6 @@
 [project]
 name = "base64-url-safe-encoder"
-version = "0.1.0"
+version = "0.1.1"
 description = "Encodes bytes using the URL-safe Base64 alphabet with no padding and decodes both padded and unpadded inputs."
 requires-python = ">=3.10"
 dependencies = []
